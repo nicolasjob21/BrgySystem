@@ -1,0 +1,79 @@
+.card-data,
+.card {
+  border-radius: 5px;
+  box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
+  border: none;
+  margin-bottom: 30px;
+  transition: all 0.3s ease-in-out;
+  padding: 30px;
+}
+
+.card-data {
+  color: white;
+}
+
+.card-data-1 {
+  background: linear-gradient(45deg, #4099ff, #73b4ff);
+}
+
+.card-data-2 {
+  background: linear-gradient(45deg, #2ed8b6, #59e0c5);
+}
+
+.card-data-3 {
+  background: linear-gradient(45deg, #ffb64d, #ffcb80);
+}
+
+.card-data-4 {
+  background: linear-gradient(45deg, #ff5370, #ff869a);
+}
+
+.navbar-top {
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+.navbar-top .navbar-link {
+  width: auto;
+  color: #555;
+  text-decoration: none;
+  text-transform: none;
+  align-self: center;
+}
+
+.push-active {
+  width: 60px !important;
+  transition: ease-in-out 0.2s;
+}
+.push-active > a {
+  display: flex;
+  justify-content: center;
+}
+.push-active > a > .glyphicon {
+  display: flex;
+  justify-content: center;
+  margin-right: 0 !important;
+  padding: 0 !important;
+}
+.push-active > a > span:last-child {
+  display: none;
+}
+
+.content-title {
+  font-size: 23px;
+}
+
+.mr-5 {
+  margin-right: 10px;
+}
+
+.ml-10 {
+  margin-left: 15px !important;
+}
+
+.bg-white {
+  background-color: #ffffff !important;
+}

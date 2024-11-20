@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.main-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('images/BRGY.jpg'); /* Your background image path */
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  filter: blur(8px);
+  z-index: 0;
+}
+
+.maps {
+  padding: 10px; /* Add some padding around the maps */
+  margin-top: -20px; /* Move the maps up */
+}
+
+.login-form {
+  position: fixed; /* or absolute if within a positioned parent */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers the form */
+  z-index: 1; 
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  color: #1c1e21;
+  font-size: 1.1rem;
+  text-align: center;
+  backdrop-filter: blur(10px); 
+}
+
+.login-form h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Adds subtle text shadow */
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: 600;
+  color: #000000;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #dddfe2;
+  font-size: 14px;
+  color: #1d2129;
+  background-color: rgba(245, 246, 247, 0.8); /* Semi-transparent input fields */
+  backdrop-filter: blur(4px);
+}
+
+button[type="submit"] {
+  background-color: #4267b2;
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.2s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+button[type="submit"]:hover {
+  background-color: #365899;
+}
+
+.error-message {
+  color: #f02849;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 13px;
+}

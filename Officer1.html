@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Character encoding for the HTML document -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Compatibility with Internet Explorer -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design -->
+    <title>Barangay 45 - Patient/Medicine Records Management System</title> <!-- Page title -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans"> <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> <!-- Bootstrap CSS for styling -->
+    <style>
+        /* Basic styles for body */
+        body {
+            font-family: 'Open Sans', sans-serif; /* Font for the body */
+            background-color: #f8f9fa; /* Light background color */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+        /* Styles for the navbar toggle button */
+        .navbar-toggle-box {
+            position: fixed; /* Fixed positioning */
+            top: 10px; /* Distance from top */
+            left: 10px; /* Distance from left */
+            z-index: 999; /* Stacking order */
+            background-color: #007bff; /* Button color */
+            padding: 10px; /* Inner padding */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            display: flex; /* Flexbox for alignment */
+            align-items: center; /* Center content vertically */
+        }
+        /* Styles for the image inside the toggle button */
+        .navbar-toggle-box img {
+            width: 40px; /* Set width for the icon */
+            height: auto; /* Maintain aspect ratio */
+            margin-right: 5px; /* Space between icon and text */
+        }
+        /* Styles for text in the toggle button */
+        .navbar-toggle-box span {
+            color: #ffffff; /* White text color */
+            font-weight: bold; /* Bold text */
+        }
+        /* Styles for the sidebar navigation */
+        .navbar-links {
+            display: none; /* Hidden by default */
+            position: fixed; /* Fixed positioning */
+            top: 0; /* Align with the top */
+            left: 0; /* Align with the left */
+            width: 15%; /* Width of the sidebar */
+            height: 100%; /* Full height */
+            background-color: #343a40; /* Dark background color */
+            z-index: 998; /* Below the toggle button */
+            padding-top: 100px; /* Space from the top */
+            box-sizing: border-box; /* Include padding in width */
+            overflow-y: auto; /* Scroll if content overflows */
+        }
+        /* Styles for links in the sidebar */
+        .navbar-links a {
+            display: block; /* Block display for links */
+            margin-bottom: 15px; /* Space between links */
+            color: #ffffff; /* White text color */
+            padding: 10px; /* Inner padding */
+            text-decoration: none; /* Remove underline */
+            transition: background-color 0.3s ease; /* Smooth background color transition */
+        }
+        /* Hover effect for sidebar links */
+        .navbar-links a:hover {
+            background-color: #495057; /* Darker background on hover */
+        }
+        /* Container for main content */
+        .container {
+            margin-left: 15%; /* Offset for sidebar */
+            padding: 20px; /* Padding around content */
+        }
+        /* Flexbox layout for officials */
+        .people-list, .people-list1 {
+            display: flex; /* Use flexbox for layout */
+            flex-wrap: wrap; /* Wrap items to the next line */
+            gap: 20px; /* Space between items */
+            margin-top: 20px; /* Space above the list */
+        }
+        /* Styles for individual official cards */
+        .Off, .Off1 {
+            background-color: #ffffff; /* White background */
+            padding: 20px; /* Inner padding */
+            border-radius: 5px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+            text-align: center; /* Center text */
+            flex: 1 1 200px; /* Flex properties for responsiveness */
+        }
+        /* Image styling within official cards */
+        .Off img {
+            max-width: 100%; /* Responsive image */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 5px; /* Rounded corners */
+            margin-bottom: 10px; /* Space below image */
+        }
+        /* Specific image styling for the first official card */
+        .Off1 img {
+            max-width: 28%; /* Smaller width for the first official */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 5px; /* Rounded corners */
+            margin-bottom: 10px; /* Space below image */
+        }
+        /* Heading styles for official cards */
+        .Off h3, .Off1 h3 {
+            color: #007bff; /* Blue color for headings */
+            margin-bottom: 10px; /* Space below heading */
+        }
+        /* Paragraph styles for official cards */
+        .Off p, .Off1 p {
+            color: #343a40; /* Darker text color */
+            margin: 0; /* Remove default margin */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar toggle button -->
+    <div class="navbar-toggle-box" onclick="toggleNav()">
+        <img src="images/menuicon.png" alt="Menu Icon"> <!-- Menu icon -->
+    </div>
+
+    <!-- Navbar links -->
+    <div class="navbar-links" id="navbar-links">
+        <a href="home1.php">Announcement</a>
+        <a href="Officer1.html">List of Barangay Officials</a>
+        <a href="prescription_display.php">My Prescription</a>
+        <a href="user_prescription.php">Submit Prescription</a>
+        <a href="Medhis.php">Check Medicine</a>
+        <a href="fillup.php">Appointment</a>
+        <a href="contacts1.html">Contacts</a>
+        <a href="logout.php">Log Out</a>
+    </div>
+    
+    <!-- Main content container -->
+    <div class="container">
+        <div class="people-list1">
+            <div class="Off1"> <!-- Card for the Barangay Chairwoman -->
+                <img src="images/brgyoff/Ch.jpg" alt="Crisanta D.C Casas">
+                <h3>Crisanta D.C Casas</h3>
+                <p>Barangay Chairwoman</p>
+            </div>
+        </div>
+        <div class="people-list">
+            <!-- Card for each Barangay official -->
+            <div class="Off">
+                <img src="images/brgyoff/KG1.jpg" alt="Benjamin Casas">
+                <h3>Benjamin Casas</h3>
+                <p>Barangay Kagawad</p>
+            </div>
+            <div class="Off">
+                <img src="images/brgyoff/KG2.jpg" alt="Emma-Rose V. Tiangco">
+                <h3>Emma-Rose Tiangco</h3>
+                <p>Barangay Kagawad</p>
+            </div>
+            <div class="Off">
+                <img src="images/brgyoff/KG3.jpg" alt="Beverly Nicdao">
+                <h3>Beverly <br> Nicdao</h3>
+                <p>Barangay Kagawad</p>
+            </div>
+            <div class="Off">
+                <img src="images/brgyoff/KG4.jpg" alt="Monchito Sabangan">
+                <h3>Monchito Sabangan</h3>
+                <p>Barangay Kagawad</p>
+            </div>
+            <div class="Off">
+                <img src="images/brgyoff/KG5.jpg" alt="Rosauro Inoncillo">
+                <h3>Rosauro Inoncillo</h3>
+                <p>Barangay Kagawad</p>
+            </div>
+            <div class="Off">
+                <img src="images/brgyoff/KG6.jpg" alt="Kenneth Paulo Mendoza">
+                <h3>Kenneth Paulo Mendoza</h3>
+                <p>Barangay Kagawad</p>
+            </div>
+            <div class="Off">
+                <img src="images/brgyoff/KG7.jpg" alt="Edwin Facinabao">
+                <h3>Edwin Facinabao</h3>
+                <p>Barangay Kagawad</p>
+            </div>
+            <div class="Off">
+                <img src="images/brgyoff/SEC.jpg" alt="Maria Socorro Garcia">
+                <h3>Maria Socorro Garcia</h3>
+                <p>Secretary</p>
+            </div>
+            <div class="Off">
+                <img src="images/brgyoff/TRES.jpg" alt="Mina Lavarias">
+                <h3>Mina <br> Lavarias</h3>
+                <p>Treasurer</p>
+            </div>
+            <div class="Off">
+                <img src="images/brgyoff/SK Ch.jpg" alt="Francesca Julia Simbulan">
+                <h3>Francesca Julia Simbulan</h3>
+                <p>SK Chairman</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to toggle the sidebar navigation
+        function toggleNav() {
+            var navLinks = document.getElementById("navbar-links");
+            if (navLinks.style.display === "block") {
+                navLinks.style.display = "none"; // Hide the sidebar if currently displayed
+            } else {
+                navLinks.style.display = "block"; // Show the sidebar if currently hidden
+            }
+        }
+    </script>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

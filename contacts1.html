@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="contacts.css">
+    
+</head>
+<body>
+    <div class="navbar-toggle-box" onclick="toggleNav()" aria-label="Toggle Navigation">
+        <img src="images/menuicon.png" alt="Menu Icon">
+    </div>
+
+    <!-- Navbar links -->
+    <div class="navbar-links" id="navbar-links">
+        <a href="home1.php">Announcement</a>
+        <a href="Officer1.html">List of Barangay Officials</a>
+        <a href="prescription_display.php">My Prescription</a>
+        <a href="user_prescription.php">Submit Prescription</a>
+        <a href="Medhis.php">Check Medicine</a>
+        <a href="fillup.php">Appointment</a>
+        <a href="contacts1.html">Contacts</a>
+        <a href="logout.php">Log Out</a>
+    </div>
+
+    <main class="main-content">
+        <div class="container">
+            <header class="header">
+                <h1>Contact</h1>
+            </header>
+            <section class="department">
+                <h2>Committee on Health</h2>
+                <div class="number">
+                    <p>Emma-Rose V. Tiangco</p>
+                    <p>0908-321-0361</p>
+                </div>
+            </section>
+            <div class="social-links">
+                <a href="https://www.facebook.com/emmarose.tiangco" target="_blank" rel="noopener noreferrer">Committee on Health's Facebook Account</a>
+                <a href="https://www.facebook.com/barangay.kwarentasingko.5" target="_blank" rel="noopener noreferrer">Barangay 45's Facebook Page</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        function toggleNav() {
+            var navLinks = document.getElementById("navbar-links");
+            if (navLinks.style.display === "block") {
+                navLinks.style.display = "none";
+            } else {
+                navLinks.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
